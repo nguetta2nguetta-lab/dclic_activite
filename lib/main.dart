@@ -24,27 +24,19 @@ class pageAccueil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Magazine Infos',
-          style: TextStyle(color: Colors.white),),
+        title: const Text(
+          'Magazine Infos',
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
         backgroundColor: Colors.pink,
         iconTheme: const IconThemeData(color: Colors.white),
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {},
-          ),
-        ],
+        leading: IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
+        actions: [IconButton(icon: const Icon(Icons.search), onPressed: () {})],
       ),
       body: const Column(
         children: [
-          Image(
-            image: AssetImage('assets/images/magazineInfo.jpg'),
-          ),
+          Image(image: AssetImage('assets/images/magazineInfo.jpg')),
           PartieTitre(),
           PartieTexte(),
           PartieIcone(),
@@ -54,7 +46,6 @@ class pageAccueil extends StatelessWidget {
     );
   }
 }
-
 
 class PartieTitre extends StatelessWidget {
   const PartieTitre({super.key});
@@ -81,7 +72,6 @@ class PartieTitre extends StatelessWidget {
   }
 }
 
-
 class PartieTexte extends StatelessWidget {
   const PartieTexte({super.key});
 
@@ -91,16 +81,15 @@ class PartieTexte extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: const Text(
         "Magazine Infos est bien plus qu'un simple d'informations. "
-            "C'est votre passerelle vers le monde, une source inestimable de connaissances et d'actualités"
-            "soigneusement selectionnées pour vous éclairer sur les enjeux mondiaux, "
-            "la culture, la science, l'IA, et voir même le divertissement (le jeux).",
+        "C'est votre passerelle vers le monde, une source inestimable de connaissances et d'actualités"
+        "soigneusement selectionnées pour vous éclairer sur les enjeux mondiaux, "
+        "la culture, la science, l'IA, et voir même le divertissement (le jeux).",
         style: TextStyle(fontSize: 13, height: 1.5),
         textAlign: TextAlign.justify,
       ),
     );
   }
 }
-
 
 class PartieIcone extends StatelessWidget {
   const PartieIcone({super.key});
@@ -112,7 +101,6 @@ class PartieIcone extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          // Tel
           Container(
             child: Column(
               children: const [
@@ -129,7 +117,6 @@ class PartieIcone extends StatelessWidget {
             ),
           ),
 
-          // Mail
           Container(
             child: Column(
               children: const [
@@ -146,7 +133,6 @@ class PartieIcone extends StatelessWidget {
             ),
           ),
 
-          // Partage
           Container(
             child: Column(
               children: const [
@@ -167,8 +153,6 @@ class PartieIcone extends StatelessWidget {
     );
   }
 }
-
-
 
 class PartieRubrique extends StatelessWidget {
   const PartieRubrique({super.key});
